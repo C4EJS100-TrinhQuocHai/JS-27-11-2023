@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            margin: 5px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+         .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .box1{
+            /* margin-top: 50px; */
+            position: relative;
+            bottom: 50px;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color: #dbdbdb;
+            position: absolute;
+        }
+        .absolute{
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        position: định vị,vị trí các khối
+        1.static : trạng thái mặc định
+        2.relative: vị trí tương đối -done
+        3.absolute: vị trí tuyệt đối -done
+        4.fixed                      -done
+        5.sticky                     -done
+
+       2. RELATIVE.
+       -Khi 1 element có thuộc tính position là relative thì nó sẽ lấy vị trí ban đầu
+       của nó làm gốc
+       -Muốn căn chỉnh khối thì dùng các thuộc tính
+            1.cách trái : left
+            2.cách phải : right
+            3.cách trên : top
+            4.cách dưới :bottom
+       3. ABSOLUTE
+       -Nó sẽ ăn theo thằng cha chứa nó gần nhất có thuộc tính là position
+       -Nếu không có thằng cha chứa nó thoã mãn thì ăn theo kích thước màn hình
+     -->
+    <div class="box box1">
+        box1
+    </div>
+    <div class="box box2">
+        box2
+    </div>
+    <div class="container">
+        box container
+        <div class="absolute">
+            box-absolute
+        </div>
+    </div>
+</body>
+
+</html>

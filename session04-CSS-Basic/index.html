@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <!-- <style>
+        h3{
+            color: green;
+        }
+    </style> -->
+</head>
+
+<body>
+    
+    <!-- 
+        CSS - Cascading style sheets : ngôn ngữ dùng để  tạo phong cách,dàn layout cho các
+        element trong html
+        I-Các cách viết CSS trong trang HTML
+        3 cách:
+        Cách 1:   inline  : Viết CSS trực tiếp trong element( thẻ).
+        Ưu điểm:-Nếu ít code  
+        nhược điểm:-Nếu code nhiều sẽ nhìn khó nhìn,dài ,rối
+        Cách 2: internal : Viết CSS  trong cặp thẻ style
+        -Tức là mình tạo 1 cặP thẻ style
+        -Vị trí: trong thẻ head.
+        Ưu điểm : đã có cặp thẻ style riêng
+        Nhược điểm : do viết cùng file html nên code dài ,khó nhìn,và không tái sử dụng 
+        được cho các file css khác.
+        Cách 3: external : tạo 1 file có đuôi .css sau đó viết code CSS trong file đó
+        rồi link vào trang html
+        -Code clear và dễ maintain có thể tái sử dụng.
+
+        ************************************
+        class và id 
+        -định danh cho element
+        -class : có thể dùng chung cho nhiều element
+        -id    : giống như  cccd chỉ 1 thôi tức là 1 element thì có 1 id.
+        Độ ưu tiên trong CSS từ thấp đến cao
+        element==>class==>id==>!important
+
+        ***************************************
+        Css Selector (bộ chọn)
+        -Các bộ chọn cơ bản
+        element
+        class
+        id
+        div p;
+        div + p
+        div > p
+        :hover
+        :active
+        :before
+        :after
+        ...
+        ***************************************
+        font chữ
+        1.font-size là cỡ chữ
+        2.font-weight : là độ đậm,dày của text
+        3.font-family : kiểu chữ
+        **************************
+        Mô hình hộp trong CSS
+        1.content
+        2.padding
+        3.border : là độ dày của viền trong box-model
+        4.margin
+
+        *********
+        khi viết CSS phải reset CSS
+        việc đưa CSS về trạng thái ban đầu.
+        *********
+        1.inline không set được width,height
+        -nằm trên cùng 1 hàng và độ rộng bằng độ rộng của text
+        2.block thì set được width,height
+        -mỗi ông sẽ chiếm chọn 1 dòng
+        3.inline-block set được width và height nhưng hiển thị theo kiểu inline
+        inline nằm trên cùng 1 hàng.
+     -->
+    <p style="color: red;"> css inline </p>
+    <h3> css internal </h3>
+    <h2 class="chung title "> css external thứ 1 </h2>
+    <h2 class="chung"> css external thứ 2 </h2>
+    <h2 id="title" class="chung"> css external thứ 3 </h2>
+    <p class="css" id="css" style="color:yellow ;">css độ ưu tiên </p>
+    <span>chung</span>
+    <p>Lorem ipsum dolor sit amet.</p>
+     <!-- <div>
+       js 27/11/2023
+     </div>
+    <p>xin chào js t11 </p> -->
+    <div>
+       
+        <section>
+            <p>js 27/11/2023</p>
+        </section>
+        <p>học css basic</p>
+    </div>
+    <a href=""></a>
+   
+    <button class="btn">hover</button>
+    <button class="btn-active">active</button>
+    <input type="text">
+    <article >CSS cho text dùng color1111111111111111</article>
+    <p class="text-color">CSS cho text dùng color</p>
+    <p class="text-font"> CSS cho font chữ </p>
+    <p class="text-font1"> CSS cho font chữ </p>
+
+     <div class="container">
+            box model
+     </div>
+       
+        <span class="span1"> span inline </span>
+        <span class="span2"> span inline-block </span>
+
+
+</body>
+</html>

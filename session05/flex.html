@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            height: 250px;
+            display: flex;
+            flex-direction: row; 
+           /* justify-content: space-evenly;
+           align-items: center; */
+            justify-content: space-evenly;
+            /* align-items: center; */
+            flex-wrap: wrap;
+            /* khi chiềU rộng của flex item lớn hơn chiều rộng của container thì
+            tự động xuống dòng
+             */
+        }
+        .item{
+            background-color: red;
+            height: 20px;
+            width: 600px;
+           
+        }
+        /* .item1{
+            flex: 3; 
+        }
+        .kien{
+            flex: 1;
+        }
+         */
+
+    </style>
+</head>
+<body>
+    <!-- 
+        flex: dùng để căn chỉnh layout
+        -Để nắm được flex thì đầu tiên nắm:
+        display: flex
+        -Khi 1 element có display=flex tức là nó trở thành flex -container
+        1.flex-container
+            Thế nào là flex-container
+            ==>Chính là thằng cha chứa các thằng con
+        2.flex-item
+            Thế nào là flex-item
+            ==>là các thằng con
+        3.Nắm cho thầy 2 trục
+        3.1: trục main-axis : trục chính
+            -trục main-axis ăn theo thuộc tính justify-content:
+            justify-content : có các giá trị sau
+            1.center
+            2.space-beetween
+            3.space-around
+            4.space-evenly
+        3.2: trục cross-axis: trục phụ
+            -trục cross-axis ăn theo thuộc tính align-item:
+        -hai trục này luôn luôn vuông góc với nhau
+        4.thuộc tính flex-direction: mặc định là row
+        -Khi flex-direction là row thì trục main-axis nằm ngang
+        còn trục cross-axis nằm dọc
+        -Khi flex-direction là column thì trục cross-axis nằm ngang
+        còn trục main-axis nằm dọc
+     -->
+     <div class="container">
+        <div class="item item1">
+            item1
+        </div>
+        <div class="item kien">
+            item2
+        </div>
+        <div class="item kien">
+            item3
+        </div>
+        <div class="item kien">
+            item4
+        </div>
+     </div>
+</body>
+</html>

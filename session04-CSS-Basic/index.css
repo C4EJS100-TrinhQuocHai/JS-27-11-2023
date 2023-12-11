@@ -1,0 +1,83 @@
+/* h2{
+  color: violet;  
+} */
+/* *{
+    background-color: red;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h3{
+    color: tomato;
+}
+#title {
+    color: blue;
+}
+.chung{
+    color: yellow;
+}
+.title{
+    font-size: 50px;
+    
+}
+
+#css{
+    color: green;
+}
+.css{
+    color: red ;
+}
+/* p{
+    color: violet !important;
+} */
+span{
+    color: red;
+}
+div > p{
+    color: rgb(7, 185, 240);
+}
+.btn:hover{
+    background-color: red;
+}
+.btn-active:active{
+    background-color: rgb(255, 0, 0);
+}
+.text-color{
+    color: hsla(300, 50%, 50%, 0.5);
+}
+.text-font{
+    font-size: 48px;
+    font-weight: 900;
+   
+}
+.box {
+    font-size: 100px;
+}
+.text-font1 {
+    font-size: 48px;
+}
+.container{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 5px solid black;    
+  
+}
+
+.span1{
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    background-color: red;
+    margin: 5px;
+}
+.span2 {
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    background-color: red;
+}
+

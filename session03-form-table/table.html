@@ -6,6 +6,79 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- 
+        table: tạo bảng (ví dụ :  bảng quản lý sinh viên, quản lý sản sẩm ....)
+        -Cách để tạo bảng
+        -Nhớ các thẻ ,thuộc tính trong bảng
+        caption : để mô tả bảng (ví dụ danh sách học viên)
+        tr      : hiển thị dòng trong bảng
+        td      : hiển thị cột trong bảng
+        border  : đường viền dành cho hàng và cột trong bảng.
+        th      : tạo màu đậm cho text và tự động căn chính giữa các cột
+        *****
+        Những thuộc tính thêm
+        -align : "center" : căn ra giữa
+               : " left"  :căn đầu lề bên trái
+                 " right" : căn ra sát lề bên phải
+        -cellpadding : là khoảng cách từ viền của ô so với text
+        -cellspacing : là khoảng cách từ viền của ô so với viền của bảng
+        -colspan     : để gộp các cột lại với nhau
+        -rowspan     : để gộp các hàng lại với nhau
+        -bgcolor     : set màu cho cột or cho hàng
+        -entity
+        
+    -->
+        <!-- <p>&copy;</p> -->
+        <table  border="1" cellpadding="15" cellspacing="5">
+            <caption> Danh sách học viên </caption>
+            <thead>
+                <!-- phần đầu -->
+                <tr bgcolor="green">
+                    <th>ID học sinh</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Họ và Tên</th>
+                    <th>TT làm bài tập</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- phần thân của bảng -->
+                <tr>
+                    <td align="center">329</td>
+                    <td>vinhhdq97</td>
+                    <td>Huỳnh Đức Quang Vinh</td>
+                    <td>Làm đầy đủ</td>
+                </tr>
+                 <tr>
+                    <td bgcolor="yellow" rowspan="2">330</td>
+                    <td>vananh</td>
+                    <td>Nguyễn Thị Vân Anh</td>
+                    <td>Làm đầy đủ</td>
+                </tr>
+                 <tr>
+                    <!-- <td>331</td> -->
+                    <td bgcolor="red">anlv</td>
+                    <td>Lê Văn An</td>
+                    <td>Làm đầy đủ</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- phần cuối của bảng  -->
+                <tr>
+                    <td colspan="3">Tổng số sinh viên Nam</td>
+                    <td>2</td>
+                </tr>
+            </tfoot>
+        </table>
+        <nav>
+            <ul>
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Liên Hệ</a></li>
+
+            </ul>
+        </nav>
+        <!-- 
+            SEO: search enginee optimization
+         -->
+         <img src="../images/a.png" alt="">
 </body>
 </html>
