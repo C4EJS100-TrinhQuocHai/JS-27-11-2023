@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            position: relative;
+            width: 80px;
+            height: 30px;
+            background-color: #eeb9b9;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            /* transition-property:background-color ; */
+            /* 
+                all: tức là ăn hết các thuộc tính CSS
+                3s : tức là thời gian thực hiện hết hiệU ứng
+                linear: tức là tốc độ chuyển đỘng 
+                1s: là độ trễ ( tức là nó phải chạy hêt cái độ trễ này thì mới
+                áp dụng hiệu ứng).
+             */
+        }
+        .btn::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:0;
+            height: 100%;
+            transition: all 1s linear 5s;
+            background-color: red;
+        }
+        .btn:hover::before{
+          width: 100%;
+        }
+        .btn-1{
+            position: relative;
+            margin: 50px;
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            background-color: tomato;
+        }
+        .btn-1 span:nth-child(1){
+            /* color:yellow */
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 0;
+           height: 5px;
+           background-color: green;
+           transition: all 1s linear;
+        }
+        .btn-1:hover span:nth-child(1){
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        Transtion: hiệu ứng giúp cho việc chuyển động
+        -dùng trong những trường hợp nào
+         +dùng click,hover vào các nút bấm rồi áp dụng hiệu ứng
+     -->
+    <button class="btn">
+        login
+    </button>
+    <br>
+    <button class="btn-1">
+       register
+       <span></span>
+       <span>2</span>
+       <span>3</span>
+       <span>4</span>  
+    </button>
+</body>
+</html>
