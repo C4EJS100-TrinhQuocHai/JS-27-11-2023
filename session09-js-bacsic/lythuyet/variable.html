@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Variable(biến): là từ khoá dùng để khai báo các kiểu dữ liệu.
+        3 từ khoá dùng để khai báo biến
+         + var
+            + có thể khai báo lại
+            + có thể gán lại giá trị
+            + phạm vi hoạt động function
+            + có hoisting truy cập được
+         + let
+            + không thể khai báo lại
+            + có thể gán lại giá trị
+            + phạm vi hoạt động là block -scope
+            + có hoisting nhưng không truy cập được
+         + const thường dùng để khai báo hằng số.
+            + không thể khai báo lại
+            + không thể gán lại giá trị
+            + phạm vi hoạt động là block -scope
+            + có hoisting nhưng không truy cập được
+            + khi khai báo bắt buộc phải gán giá trị cho nó
+         fullName: là tên biến
+         =  gán giá trị (chứ không phải là so sánh)
+         vũ hồng vân : giá trị của biến
+     -->
+     <script>
+        var fullName ="vũ hồng vân";
+        var fullName ="lê minh huyền";
+            fullName = "chung";
+        
+        let age=25;
+            age=30;
+        console.log(fullName);
+        console.log(age);
+        const number=5;
+     </script>
+</body>
+</html>
