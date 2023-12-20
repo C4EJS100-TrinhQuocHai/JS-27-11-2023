@@ -26,8 +26,13 @@
             + có hoisting nhưng không truy cập được
             + khi khai báo bắt buộc phải gán giá trị cho nó
          fullName: là tên biến
+         -có phân biệt hoa thường
+         -đặt tên theo quy tắc camel-case (quy tắc con lạc đà)
+         -không được bắt đầu bằng số,chữ cái đặc biệt (trừ $,_)
+         -tránh đặt tên trùng từ khoá đặc biệt trong js (class,let,var,const,try,catch...)
          =  gán giá trị (chứ không phải là so sánh)
          vũ hồng vân : giá trị của biến
+         Các kiểu dữ liệu 
      -->
      <script>
         var fullName ="vũ hồng vân";
@@ -36,9 +41,10 @@
         
         let age=25;
             age=30;
+        
         console.log(fullName);
         console.log(age);
-        const number=5;
+        const PI=3.14;
      </script>
 </body>
 </html>

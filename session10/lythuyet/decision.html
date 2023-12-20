@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        DECISION: câu điều kiện
+        if-
+        -Đối với if (condition) THOÃ MÃN Thì phần thân if được thực thi
+        -Thế nào là thoã mãn : Là truthy thì chạy
+        -if-else
+        Một trong 2 cái bắt buộc phải chạy 1 cái
+        -if-else-if
+        -switch-case
+     -->
+    <script>
+        // let a=4;
+        // if(a>3){
+        //     // template literial
+        //      // có thể truyền biến vào trong string
+        //     console.log(`${a} lớn hơn 5`);
+        // }else{
+        //     console.log("chạy vào else!");
+        // }
+
+        // let day = Number(prompt("mờI bạn nhập ngày trong tuần"));
+        // if(day==2){
+        //     console.log("thứ 2");
+        // }else if(day==3){
+        //     console.log("thứ 3");
+        // }else if(day==4){
+        //     console.log("thứ 4");
+        // }
+        // key là giá trị truyền vào
+        // break thoát khỏi case
+        /*   switch (day) {
+              // case sẽ đi kiểm tra value có bằNg key hay không
+              case 2:
+                  // các case kiểm tra === kiểm tra nghiêm ngặt
+                  console.log("ngày thứ 2");
+                 break
+              case 3:
+                  console.log("ngày thứ 3");
+                  break;
+              case 4:
+                  console.log("ngày thứ 4");
+                  break;
+              default:
+                console.log("ngày không thoã mãn!");
+          } */
+        // cho ngườI dùng nhập vào 1 ngày bất kì
+        // nếu là 2,4,6 thì in ra thông báo ngày đi học
+        // còn không thì in ra ngày được nghỉ-dùng switch-case
+
+        let day = +prompt("mời bạn nhập ngày bất kì");
+        switch (day) {
+            case 2:
+            case 4:
+            case 6:
+                console.log("ngày đi học");
+                break;
+            default:
+                console.log("ngày không thoã mãn!");
+                break;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Toán tử trong JS
+        1.Toán tử số học
+        +,-,*,/,%,**
+        
+        %:chia lấy dư
+        -khi  số bị chia nhỏ hơn số chia kết quả lấy số bị chia
+        **: mũ
+        2.Toán tử logic
+        ||(or),
+        -nó sẽ lấy trusthy đầu tiên nếu không có lấy cuối cùng
+        -1 trong các trường hợp thoã mãn thì được
+        &&(and)
+         - nó sẽ lấy falsy đầu tiên nếU không có lấy thằng cuối cùng
+        -tất cả các trường hợp phải thoã mãn
+        -1 trusthy : không phải falsy
+        -2 falsy : flase,0,NaN,undefined,null,"",''
+        -NOTE: Trong phép toán có || và && thì sẽ ưu tiên && trước rồi mới đến OR
+        3.Toán tử so sánh
+        ==,===,>,<,>=,<=,!=,!==
+        ==: so sánh giá trị
+        ===: so sánh giá trị và kiểu dữ liệu
+
+        4.Toán tử tăng giảm
+        ++,--
+        ...
+     -->
+     <script>
+        let result=  2**7;
+        console.log(result);
+        console.log(1||2&&3);
+        let a=5;
+        let b="5";
+        console.log(a==b);// true 
+        console.log(a === b);
+        // flase tại vì a có kiểu dữ liệu number,b có kiểu dữ liệu string
+        console.log(a!=b);// so sánh khác giá trị : flase
+        console.log(a !== b);// so sánh khác giá trị or kiểu dữ liệu : true
+        let count=1;
+        // count++; // hậu tố là sau cho nên tăng sau
+        // ++count;//tiền tố là trước cho nên tăng trước
+        console.log(++count);
+
+
+     </script>
+</body>
+</html>
