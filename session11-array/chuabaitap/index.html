@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    let array=[1,22,44,11,34,56,89];
+    //function sort
+    function sortByValue(){
+        array.sort((a,b)=>{
+            return a-b;
+        })
+        return array
+    }
+    console.log("bé đến lớn", sortByValue());
+
+    let x = 2; 
+    let a = [1, 2, 3, 4];
+
+    for (let i = 0; i < a.length; i++) {
+
+        if (a[i] < x) {
+
+            x = a[i]; // x đang là 1
+
+        }
+    }
+
+    console.log(x);
+
+  </script>
+</body>
+</html>

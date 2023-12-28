@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+        hàm tái sử dụng: nhờ vào đâu
+        Tham số đối số-CỰC KÌ QUAN TRỌNG
+        Đối số là khi gọi hàm rồi truyền cho nó giá trị
+        Tham số là khi đặt biến nhận giá trị về
+     -->
+     <script>
+        function sayHello(name,bien2) {
+            console.log(`xin chào ${name}`);
+            console.log(`xin chào ${bien2}`);
+        }
+        sayHello("hoa","hồng");
+
+        //tính tổng từ 1 đến 5
+       function tinhTong(a,b) {
+         let total = 0;
+           for (let i = a; i <= b; i++) {
+
+               total += i
+           }
+           console.log(total);
+       }
+       tinhTong(1,5);
+       tinhTong(1,8);   
+
+     </script>
+</body>
+</html>

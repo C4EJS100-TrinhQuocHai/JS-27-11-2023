@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        closures: 
+        • Cho phép lồng các function trong nhau
+        • Các function con được định nghĩa bên trong function cha
+        chứa nó
+        • Function con truy cập được các biến của function cha
+        • Function cha không thể truy cập biến của function con
+     -->
+    <script>
+        function parent() {
+            let a = 7;
+            function children() {
+                let b = 5;
+            }
+            children()
+
+        }
+        parent();
+        {
+            let number = 6;
+            {
+                {
+                    {
+                        console.log(number);
+                    }
+                }
+            }
+        }
+        function tinhTong() {
+
+            console.log("hello");
+
+        }
+
+        function check() {
+
+            tinhTong()
+
+            console.log("hello 1");
+
+        }
+
+        check();
+        console.log([] == true);
+
+        function logger() {
+
+            let a = 6;
+
+            function logger1(params) {
+
+                console.log(a++);
+
+            }
+
+            logger1()
+
+        }
+
+        logger()
+    </script>
+</body>
+
+</html>

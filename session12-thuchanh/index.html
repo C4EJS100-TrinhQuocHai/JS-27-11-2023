@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          let todoList = ["Go to school at 7am", "Read book at 12am"];
+            while (1) {
+                let a = prompt("Mời nhập chữ cái (C/R/U/D/E) :");
+                if (a == "E") {
+                    break;
+                } else {
+                    switch (a) {
+                        case "C":
+                            let job = prompt("Mời bạn nhập nội dung công việc mới: ");
+                            todoList.push(job);
+                            console.log(todoList);
+                            break;
+                        case "R":
+                            for (let b of todoList) {
+                                console.log(b);
+                            }
+                            break;
+                        case "U":
+                            let c = prompt("Mời bạn nhập vị trí công việc muốn cập nhật: ");
+                            //let student=["hoa","minh"]
+                            while (c > todoList.length - 1 || c < 0) {
+                                c = prompt("Vị trí không hợp lệ, mời nhập lại: ");
+                            }
+                            let updateJob = prompt("Mời bạn nhập nội dung muốn cập nhật: ");
+                            todoList.splice(c, 1, updateJob);
+                            for (b of todoList) {
+                                console.log(b);
+                            }
+                            break;
+                        case "D":
+                            let d = prompt("Mời bạn nhập vị trí công việc muốn xoá: ");
+                            while (d > todoList.length - 1 || d < 0) {
+                                d = prompt("Vị trí không hợp lệ, mời nhập lại: ");
+                            }
+                            todoList.splice(d, 1);
+                            for (b of todoList) {
+                                console.log(b);
+                            }
+                            break;
+                        default:
+                              a = prompt("Bạn đã nhập sai, mời nhập lại chữ cái (C/R/U/D/E) :");
+                    }
+                }
+            }
+    </script>
+</body>
+</html>

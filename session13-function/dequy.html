@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        dequy là gì?
+        hàm tự gọi lại chính  nó
+
+     -->
+     <script>
+        /* dùng đệ quy tính giai thừa của 5 */
+        /* [[1,2,[4,[5]]]] */
+        // [1,2,4,5]
+        function giaiThua(a) {
+            if(a==1){
+                return 3;
+            }
+            return a* giaiThua(--a)
+            /* 
+                5*4*giaiThua(3)
+                5*4*3*2*3
+             */
+        }
+        console.log(giaiThua(5));
+     </script>
+</body>
+</html>
