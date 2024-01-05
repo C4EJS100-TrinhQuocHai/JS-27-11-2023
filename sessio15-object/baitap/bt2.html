@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button onclick="addToCart()">mua</button>
+    <script>
+        let products = [
+            {
+                name: "iphone5",
+                price: 50000,
+                id: 5
+            },
+            {
+                name: "iphone6",
+                price: 60000,
+                id: 6
+            },
+            {
+                name: "iphone7",
+                price: 70000,
+                id: 7
+            },
+            {
+                name: "iphone8",
+                price: 80000,
+                id: 8
+            }
+        ]
+        let cart = [];
+        //đi mua hàng rồi tính giá tiền phải trả khi mua 
+        // xem sản phẩm có trong cửa hàng hay không
+        //nếu có cho đi mua nếu không có dừng lại luôn
+        //kiểm tra xem sản phẩm đang mua có trong giỏ hàng hay chưa
+        //nếu có thì tăng số lượng
+        //nếu không có thì thêm vào giỏ hàng
+        // tính bill phải trả.
+        function addToCart() {
+            // lấy giá trị ô input
+            let valueInput = document.getElementById("input").value;
+            console.log(valueInput);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Tham chiếu tham trị trong object
+
+     -->
+     <script>
+        let a=5;
+        let b=a;
+        a=15;
+        console.log(b);//5
+
+        let obj1={
+            name:"hoa",
+            age:25
+        }
+      
+        //làm thế nào khi thay đổi obj1 mà obj2 không thay đổi theo
+        // toán tử spread -dùng để clone object
+        let obj2={...obj1};
+        obj1.name="hồng";
+
+        console.log(obj2);
+     </script>
+</body>
+</html>

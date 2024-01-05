@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="nhap ten san pham" id="input">
+    <button onclick="addToCart()">mua</button>
+
+    <script>
+        let store = [['pc', 5000], ['banhmi', 2000], ['ao', 3000]];
+        let cart = [];
+        function addToCart() {
+            let inputValue = document.getElementById('input').value;
+            //lấy thông tin người dùng nhập vào
+            let check = -1;
+            for (let i = 0; i < store.length; i++) {
+                if (store[i][0] === inputValue) {
+                    check = i;
+                    break;
+                }
+            }
+            if (check === -1) {
+                console.log('sản phẩm không tồn tại trong cửa hàng');
+                return;
+            }
+            //kiểm tra xem sản phẩm đang mua có trong giỏ hàng hay chưa
+            //nếu có thì tăng số lượng
+            //nếu không có thì thêm vào giỏ hàng
+            // [['pc',5000,1],['banhmi',2000,2]]
+            console.log('đi mua hàng');
+            let check1 = -1;//việc cắm cờ để vòng for chạy hết, cuối cùng mình kiểm tra biến cờ đó thôi
+            for (let k = 0; k < cart.length; k++) {
+                if (cart[k][0] === inputValue) {
+                    check1 = k;
+                    break;
+                }
+            }
+            if (check1 !== -1) {
+                //sản phẩm có trong giỏ hàng
+                cart[check1][2] += 1;
+                console.log(cart);
+            } else {
+                //sản phẩm không có trong giỏ hàng thì push vào
+                cart.push([...store[check], 1]);// ... : là toán tử spread 
+                console.log(cart);
+                /* 
+                ['pc', 5000,1]
+                */
+            }
+        }
+    </script>
+</body>
+
+</html>
