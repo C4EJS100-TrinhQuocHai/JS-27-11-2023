@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <input type="text" id="input" placeholder="Nhập ID sản phẩm">
+    <button onclick="addToCart()">Mua</button>
+    <button onclick="calculateBill()">Tính Bill</button>
+    <div id="output"></div>
+
+    <script>
+        let products = [
+            {
+                name: "iphone5",
+                price: 50000,
+                id: 5
+            },
+            {
+                name: "iphone6",
+                price: 60000,
+                id: 6
+            },
+            {
+                name: "iphone7",
+                price: 70000,
+                id: 7
+            },
+            {
+                name: "iphone8",
+                price: 80000,
+                id: 8
+            }
+        ]
+        let cart = [];
+        //kiểm tra xem sản phẩm có trong cửa hàng, có trong giỏ hàng hay không
+        function addToCart() {
+            let productId = parseInt(document.getElementById("input").value);
+            let product = products.find(p => p.id === productId);
+
+            if (product) {
+                //kiểm tra xem sản phẩm có trong giỏ hàng hay không
+                if (isProductInCart(productId)) {
+                    increaseQuantity(productId);
+                } else {
+                    addToCartArray(product);
+                }
+
+                document.getElementById("output").innerText = `Product ${product.name} added to cart.`;
+            } else {
+                document.getElementById("output").innerText = "Product not found.";
+            }
+             console.log(cart);
+        }
+        //kiểm tra xem sản phẩm có trong giỏ hàng hay không
+        function isProductInCart(productId) {
+            return cart.some(item => item.id === productId);
+        }
+        //tăng số lượng nếu sản phẩm đã có trong giỏ hàng.
+        function increaseQuantity(productId) {
+            let item = cart.find(item => item.id === productId);
+            item.quantity++;
+        }
+        //thêm sản phẩm vào giỏ hàng nếu sản phẩm chưa có trong giỏ hàng
+        function addToCartArray(product) {
+            cart.push({ ...product, quantity: 1 });
+           
+        }
+        //tính tổng giá trị hóa đơn dựa trên giỏ hàng.
+        function calculateBill() {
+            let totalBill = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+            document.getElementById("output").innerText = `Total Bill: ${totalBill}`;
+        }
+    </script>
+</body>
+
+</html>
