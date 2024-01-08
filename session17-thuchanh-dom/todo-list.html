@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <input type="text" id="job">
+    <input type="text" id="chung">
     <button onclick="addJob()">add</button>
     <table border="1" cellpadding="5" cellspacing="5">
         <thead>
@@ -58,7 +58,7 @@
         function addJob() {
             console.log("đã chạy vào hàm add job!");
             // lấy nội dung công việc
-            let  job= document.getElementById("job").value;
+            let  job= document.getElementById("chung").value;
             console.log("nội dung công viêc",job);
             // khi khởi tạo đống tượng
             let objInfo= {
@@ -67,9 +67,16 @@
                 status:false,
             }
             jobs.push(objInfo);
+            document.getElementById("chung").value="";
             // sau khi có cái mảng chứa danh sách công việc rồi thì đem đi hiển thị
             renderJob();
         }
+         document.getElementsByTagName("body")[0].addEventListener("keypress", (event) => {
+                // console.log(event.keyCode);
+                if (event.keyCode == 13) {
+                    addJob();
+                }
+            })
         // function hiển thị danh sách công việc
          function renderJob() {
             let html="";
@@ -99,7 +106,7 @@
                                 <td>${i+1}</td>
                                
                                 ${td_name}
-                                <td> X </td>
+                                <td onclick=deleteJob(${jobs[i].id})> X </td>
                             </tr>
                         `
             }
@@ -115,6 +122,21 @@
                     break;
                 }
             }
+         }
+         // function xoá công việc
+         function deleteJob(id) {
+            console.log("id nhận về",id);
+            let  confirmDelete =confirm("bạn có muốn xoá hay không");
+            if (!confirmDelete) {
+                return
+            }
+            // tìm vị trí phần tử muốn xoá
+            let index= jobs.findIndex((item)=>{
+                return item.id==id
+            })
+            jobs.splice(index,1);
+            // sau khi xoá song gọi lại hàm render
+            console.log(renderJob());
          }
      </script>
 </body>

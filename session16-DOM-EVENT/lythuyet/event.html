@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Event là các sự kiện tương tác như bàn phím, nhấp chuột click....
+
+     -->
+     <!-- <button onclick="alert('xin chào!')">click</button> -->
+        <!-- <input type="text" onchange="changeInput()"> -->
+        <input type="text" id="text" oninput="changeInput()">
+        <button id="btn">click</button>
+        <script>
+            // function change in put
+            function changeInput() {
+                console.log("11111111111111111",document.getElementById("text").value);
+            }
+            let btn= document.getElementById("btn").addEventListener("click",()=>{
+                alert("xin chào!")
+            })
+            document.getElementsByTagName("body")[0].addEventListener("keypress",(event)=>{
+                // console.log(event.keyCode);
+                if(event.keyCode==13){
+                    addJob()
+                }
+            })
+            function addJob() {
+                console.log("xin chào");
+            }
+        </script>
+</body>
+</html>
