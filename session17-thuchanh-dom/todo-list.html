@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,td{
+            text-align: center;
+        }
+        .success{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="job">
+    <button onclick="addJob()">add</button>
+    <table border="1" cellpadding="5" cellspacing="5">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th> Trạng thái </th>
+                <th>Tên Công Việc</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+        
+    </table>
+    <!-- 
+         bước 1: tạo giao diện khi nhấn nút add gọi hàm thêm công việc
+         bước 2: tạo 1 đối tượng để lưu thông tin 1 công việc
+           tại vì công việc nó sẽ gồm các thuộc tính
+           tên công việc: để hiển thị
+           id: công việc : thêm sửa,xoá, thông tin công việc dựa vào id
+         bước 3: tạo 1 mảng lưu thông tin tất cả các đối tượng
+         bước 4: khi nhấn nút add push thông tin của tối tượng vào mảng rồi hiển thị
+     -->
+     <script>
+        
+        // tạo function sinh id ngẫu nhiên
+        function uuid() {
+            return Math.floor(Math.random()*9999999)+ new Date().getMilliseconds();
+        }
+        // tạo 1 mảng lưu thông tin tất cả các đối tượng  công việc
+        let jobs=[];
+        /* 
+            Math.random(): tạo 1 số ngẫu nhiên từ 0<=X<1
+            * với 99999 sẽ tạo 1 số ngẫu nhiên
+            Math.floor làm tròn xuống vd19.4 sẽ lấy 19.
+            new Date().getMilliiseconds(): lấy thời tính bằng milis (1000ms=1s);
+
+         */
+        // khởi tạo function thêm công việc
+        function addJob() {
+            console.log("đã chạy vào hàm add job!");
+            // lấy nội dung công việc
+            let  job= document.getElementById("job").value;
+            console.log("nội dung công viêc",job);
+            // khi khởi tạo đống tượng
+            let objInfo= {
+                name:job,
+                id:uuid(),//viết hàm sinh ngẫu nhiên  id
+                status:false,
+            }
+            jobs.push(objInfo);
+            // sau khi có cái mảng chứa danh sách công việc rồi thì đem đi hiển thị
+            renderJob();
+        }
+        // function hiển thị danh sách công việc
+         function renderJob() {
+            let html="";
+            for (let i = 0; i < jobs.length; i++) {
+                if(jobs[i].status){
+                    td_name=
+                        ` 
+                            <td>
+                                    <input onclick=clickInput(${jobs[i].id}) type="checkbox" checked>
+                            </td>
+                            <td class="success">${jobs[i].name} </td>
+                        `
+                }else{
+                    td_name = 
+                         ` 
+                            <td>
+                                <input onclick=clickInput(${jobs[i].id}) type="checkbox">
+                            </td>
+                            <td>
+                                ${jobs[i].name} 
+                            </td>
+                        `
+                }
+               html+=
+                        `
+                            <tr>
+                                <td>${i+1}</td>
+                               
+                                ${td_name}
+                                <td> X </td>
+                            </tr>
+                        `
+            }
+            document.getElementById("tbody").innerHTML=html;
+         }
+         // function click vào các ô checkbox
+         function clickInput(id_input) {
+            console.log("1111111",id_input);
+            for (let i = 0; i < jobs.length; i++) {
+                if(jobs[i].id==id_input){
+                    jobs[i].status=!jobs[i].status;
+                    renderJob()
+                    break;
+                }
+            }
+         }
+     </script>
+</body>
+</html>
